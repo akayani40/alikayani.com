@@ -6,7 +6,7 @@
  * 2. Updates next.config.ts with correct `basePath` and `assetPrefix`
  * 3. Prints clear instructions for enabling GitHub Pages
  * 4. Adds helpful tips to complete the deployment process
- */
+ 
 
 import fs from "fs";
 import path from "path";
@@ -16,31 +16,35 @@ const CONFIG_FILE = "next.config.ts";
 
 /**
  * Create readline interface
- */
+ 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-/**
+
  * Ask a single question and return the answer as a Promise
- */
+ 
 function ask(question: string): Promise<string> {
   return new Promise((resolve) => rl.question(question, resolve));
-}
 
-/**
+
+  }
+  
  * Extract repository slug from user input.
  * Accepts “user/repo” or “repo” and always returns “repo”.
  */
+/*
 function repoSlug(input: string): string {
   const parts = input.trim().split("/");
   return parts[parts.length - 1];
 }
 
-/**
+
+
+
  * Update or insert a configuration property within an exported object.
- */
+ 
 function upsertConfigContent(
   content: string,
   key: string,
@@ -75,9 +79,9 @@ function upsertConfigContent(
   );
 }
 
-/**
+
  * Main execution flow
- */
+ 
 async function main() {
   console.log("\n=== Next.js GitHub Pages Configurator ===\n");
 
@@ -137,3 +141,5 @@ main().catch((err) => {
   rl.close();
   process.exit(1);
 });
+*/
+
