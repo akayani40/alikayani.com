@@ -1,18 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  trailingSlash: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-      {
-        protocol: 'http',
-        hostname: '**',
-      },
-    ],
+    unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/alikayani.com' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/alikayani.com' : '',
 };
 
 export default nextConfig;

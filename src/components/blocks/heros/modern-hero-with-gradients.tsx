@@ -1,132 +1,52 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { Spotlight } from "@/components/ui/spotlight-new";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
-// Interactive floating code elements
-const FloatingCodeElements = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isClient, setIsClient] = useState(false);
-  const [windowSize, setWindowSize] = useState({ width: 1920, height: 1080 });
+export default function ModernHeroWithGradients() {
+  const [nameAnimationComplete, setNameAnimationComplete] = useState(false);
 
+  // Trigger name color change after all initial animations
   useEffect(() => {
-    setIsClient(true);
-    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    const timer = setTimeout(() => {
+      setNameAnimationComplete(true);
+    }, 4500); // After page load + hero animations complete
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX / window.innerWidth,
-        y: e.clientY / window.innerHeight,
-      });
-    };
-
-    const handleResize = () => {
-      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('resize', handleResize);
-    
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
-  // Don't render until client-side
-  if (!isClient) {
-    return null;
-  }
-
-  const codeSnippets = [
-    "const ai = 'future'",
-    "npm run build",
-    "git push origin main",
-    "console.log('hello')",
-    "import React from 'react'",
-    "function solve()",
-    "SELECT * FROM dreams",
-    "python main.py"
-  ];
-
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {codeSnippets.map((code, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-xs font-mono text-green-400/30 whitespace-nowrap"
-          initial={{
-            x: Math.random() * windowSize.width,
-            y: Math.random() * windowSize.height,
-            opacity: 0,
-          }}
-          animate={{
-            x: Math.random() * windowSize.width + (mousePosition.x - 0.5) * 100,
-            y: Math.random() * windowSize.height + (mousePosition.y - 0.5) * 50,
-            opacity: [0, 0.7, 0],
-          }}
-          transition={{
-            duration: 8 + Math.random() * 4,
-            repeat: Infinity,
-            ease: "linear",
-            delay: i * 0.5,
-          }}
-        >
-          {code}
-        </motion.div>
-      ))}
-    </div>
-  );
-};
-
-export default function ModernHeroWithGradients() {
-  return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Background Effects */}
-      <BackgroundGradientAnimation>
-        <div className="absolute inset-0 bg-black/90" />
-      </BackgroundGradientAnimation>
-      
-      <Spotlight
-        className="absolute inset-0"
-        fill="white"
-      />
-
-      {/* Floating Code Elements */}
-      <FloatingCodeElements />
-
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-red-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      {/* Clean Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
+        <div className="max-width">
           <div className="flex justify-between items-center py-4">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="font-bold text-xl text-white"
+              transition={{ duration: 0.4, delay: 0.5 }}
+              className="apple-body font-semibold text-foreground"
             >
               Ali Kayani
             </motion.div>
             
             <motion.div 
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
               className="hidden md:flex items-center space-x-8"
             >
-              <a href="#about" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
+              <a href="#about" className="apple-body text-muted-foreground hover:text-foreground minimal-hover">
                 About
               </a>
-              <a href="#projects" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
+              <a href="#projects" className="apple-body text-muted-foreground hover:text-foreground minimal-hover">
                 Projects
               </a>
-              <a href="#education" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
+              <a href="#education" className="apple-body text-muted-foreground hover:text-foreground minimal-hover">
                 Education
               </a>
-              <a href="#contact" className="text-gray-300 hover:text-red-400 transition-colors font-medium">
+              <a href="#contact" className="apple-body text-muted-foreground hover:text-foreground minimal-hover">
                 Contact
               </a>
             </motion.div>
@@ -134,14 +54,14 @@ export default function ModernHeroWithGradients() {
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.7 }}
               className="flex items-center gap-3"
             >
               <a
                 href="https://github.com/akayani40"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-white transition-colors"
+                className="p-2 text-muted-foreground hover:text-primary minimal-hover"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -149,7 +69,7 @@ export default function ModernHeroWithGradients() {
                 href="https://linkedin.com/in/ali-kayani"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-white transition-colors"
+                className="p-2 text-muted-foreground hover:text-primary minimal-hover"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -159,87 +79,130 @@ export default function ModernHeroWithGradients() {
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="text-center relative">
+      <div className="max-width pt-20">
+        <div className="text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 font-inter leading-tight">
-              Software Engineer &{" "}
-              <span className="bg-gradient-to-r from-red-400 to-green-400 bg-clip-text text-transparent">
-                AI Enthusiast
-              </span>
-            </h1>
-            
-            <h2 className="text-3xl md:text-4xl font-medium text-gray-200 mb-6">
-              Ali Kayani
-            </h2>
-            
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
-              Informatics Student | Building the Future Through Code & Intelligence
-            </p>
-            
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
-              SWE Intern passionate about AI, full-stack development, and building scalable tools. 
-              Equally excited by opportunities in Cloud, QA, and PM.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-2 mb-8">
-              <span className="px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm border border-red-500/30">
-                UC Irvine • B.S. Informatics (HCI)
-              </span>
-              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm border border-green-500/30">
-                Actively seeking Summer & Fall 2025 Internships
-              </span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="mb-16"
           >
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-red-600/50 bg-red-900/20 text-red-300 hover:bg-red-800/30 hover:text-red-200 hover:border-red-500 px-8 py-4 text-lg font-semibold transition-all duration-300"
+            {/* Big Bold Name with Dynamic Color Animation */}
+            <motion.h1 
+              className={`apple-title text-6xl md:text-8xl lg:text-9xl mb-12 transition-all duration-1000`}
+              initial={{ 
+                opacity: 0, 
+                y: 60,
+                scale: 0.8
+              }}
+              animate={{ 
+                opacity: 1, 
+                y: 0,
+                scale: 1
+              }}
+              transition={{ 
+                duration: 1.2, 
+                delay: 0.5,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+              style={{
+                background: nameAnimationComplete 
+                  ? 'linear-gradient(135deg, #007aff 0%, #0a84ff 25%, #34c759 50%, #ff9500 75%, #af52de 100%)'
+                  : 'none',
+                backgroundClip: nameAnimationComplete ? 'text' : 'unset',
+                WebkitBackgroundClip: nameAnimationComplete ? 'text' : 'unset',
+                color: nameAnimationComplete ? 'transparent' : 'hsl(var(--foreground))',
+                backgroundSize: nameAnimationComplete ? '200% 200%' : 'auto',
+                animation: nameAnimationComplete ? 'gradientShift 3s ease-in-out infinite' : 'none'
+              }}
             >
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
-            </Button>
+              Ali Kayani
+            </motion.h1>
+            
+            {/* Simple Tagline with proper spacing */}
+            <motion.p 
+              className="apple-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              Software Engineer & AI Enthusiast
+            </motion.p>
+            
+            <motion.p 
+              className="apple-body text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+            >
+              Informatics student at UC Irvine passionate about building intuitive technology 
+              that makes a difference. Currently seeking internship opportunities for 2025.
+            </motion.p>
+
+            {/* Single CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="mb-16"
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg apple-body font-medium minimal-hover shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <a
+                  href="/Ali_Kayani_Resume.pdf"
+                  download="Ali_Kayani_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume
+                </a>
+              </Button>
+            </motion.div>
+
+            {/* Clean Contact Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+              className="flex flex-col sm:flex-row justify-center items-center gap-8 text-sm"
+            >
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:ali@alikayani.com" className="hover:text-primary minimal-hover apple-body">
+                  ali@alikayani.com
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <ExternalLink className="w-4 h-4" />
+                <a href="https://alikayani.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary minimal-hover apple-body">
+                  alikayani.com
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
 
+          {/* Simple Status Card */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-12 flex justify-center items-center gap-8"
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            className="max-w-md mx-auto"
           >
-            <div className="flex items-center gap-4 text-gray-400">
-              <Mail className="w-5 h-5" />
-              <a href="mailto:ali@alikayani.com" className="hover:text-white transition-colors">
-                ali@alikayani.com
-              </a>
-            </div>
-            <div className="text-gray-600">•</div>
-            <div className="flex items-center gap-4 text-gray-400">
-              <ExternalLink className="w-5 h-5" />
-              <a href="https://alikayani.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                alikayani.com
-              </a>
+            <div className="product-card text-center">
+              <div className="text-primary apple-body font-semibold mb-2">
+                Available for 2025 Internships
+              </div>
+              <div className="text-muted-foreground apple-body text-sm">
+                B.S. Informatics • UC Irvine • Expected Dec 2025
+              </div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Geometric Accent Elements - Gotham Style */}
-      <div className="absolute top-20 right-20 w-32 h-32 border border-red-500/20 rounded-full animate-pulse" />
-      <div className="absolute bottom-40 left-20 w-24 h-24 border border-green-500/20 rotate-45" />
-      <div className="absolute top-1/2 right-10 w-16 h-16 bg-gradient-to-r from-red-500/10 to-green-500/10 rounded-lg rotate-12" />
     </div>
   );
 }
