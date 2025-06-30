@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Kayani | Software Engineer & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Ali Kayani, a Software Engineer & AI Enthusiast studying Informatics at UC Irvine. Showcasing innovative projects, technical skills, and passion for technology.">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Ali Kayani | Software Engineer & AI Enthusiast">
+  <meta property="og:description" content="UC Irvine Informatics student passionate about building innovative software solutions and AI applications.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alikayani.dev">
+  <meta property="og:image" content="https://alikayani.dev/og-image.jpg">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ali Kayani | Software Engineer & AI Enthusiast">
+  <meta name="twitter:description" content="UC Irvine Informatics student passionate about building innovative software solutions and AI applications.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen" aria-hidden="true">
+    <div class="loading-content">
+      <div id="name-gradient" class="loading-initials">AK</div>
+      <div class="loading-text">Loading Experience...</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-text">AK</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <div class="menu-backdrop" id="menu-backdrop"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero animate-on-scroll">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="gradient-text">Ali Kayani</span>
+        </h1>
+        <p class="hero-subtitle">Software Engineer & AI Enthusiast</p>
+        <p class="hero-description">
+          UC Irvine Informatics Student • Building the Future Through Code & Intelligence
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" data-scroll-to="projects">
+            View My Work
+          </a>
+          <a href="#contact" class="btn btn-secondary" data-scroll-to="contact">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-elements">
+          <div class="floating-card" data-delay="0">💻</div>
+          <div class="floating-card" data-delay="1">🚀</div>
+          <div class="floating-card" data-delay="2">🤖</div>
+          <div class="floating-card" data-delay="3">⚡</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Passionate about creating innovative solutions</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <p class="about-paragraph">
+            I am an <strong>Informatics student at UC Irvine</strong>, driven by an unwavering passion for technology and its potential to transform the world. From my first "Hello, World!" to architecting complex systems, every line of code represents a step toward innovation.
+          </p>
+          <p class="about-paragraph">
+            My academic journey has equipped me with a robust foundation in computer science principles while fostering expertise in <strong>artificial intelligence and machine learning</strong>. I thrive on solving complex challenges, always seeking elegant solutions that merge creativity with technical excellence.
+          </p>
+          <p class="about-paragraph">
+            Whether I'm developing scalable web applications, experimenting with neural networks, or contributing to open-source projects, I remain committed to <strong>continuous learning and collaborative growth</strong>. I believe exceptional software emerges from diverse perspectives, rigorous processes, and relentless pursuit of perfection.
+          </p>
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience section animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Building real-world solutions and driving innovation</p>
+      </div>
+      
+      <div class="experience-timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Software Engineer Intern</h3>
+            <p class="timeline-institution">ForOurLastNames - Irvine, CA</p>
+            <p class="timeline-date">September 2024 - December 2024</p>
+            <p class="timeline-description">
+              Collaborated with a cross-functional team to design and develop mobile app features, focusing on seamless integration of customer service tools.
+            </p>
+            <div class="timeline-achievements">
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Led end-to-end feature testing and implemented refinements based on user feedback, ensuring 100% Section 508 compliance across mobile platforms</span>
+              </div>
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Developed automation prototypes to streamline customer support flows, improving efficiency by 40% before engineering implementation</span>
+              </div>
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Integrated AI functionalities into mobile app to enhance user interaction and ensure smooth interoperability across core app features</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Engineering Intern – CDH Subsystem Lead</h3>
+            <p class="timeline-institution">NASA L'SPACE - Remote</p>
+            <p class="timeline-date">January 2024 - April 2024</p>
+            <p class="timeline-description">
+              Spearheaded the Command and Data Handling (CDH) subsystem of a conceptual Mars rover, including telecommunications, data computing, and software architecture subassemblies.
+            </p>
+            <div class="timeline-achievements">
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Designed software architecture workflows and generated procurement plans, aligning with NASA's project management standards</span>
+              </div>
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Directed 8 cross-functional engineers to deliver a 219-page Preliminary Design Review, presented to NASA staff</span>
+              </div>
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Created foundational specifications for Mars rover architecture used as engineering implementation guide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Project Management Intern</h3>
+            <p class="timeline-institution">All State Restoration - Brooklyn, NY</p>
+            <p class="timeline-date">June 2023 - September 2023</p>
+            <p class="timeline-description">
+              Streamlined construction project management processes while ensuring compliance with safety and regulatory standards.
+            </p>
+            <div class="timeline-achievements">
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Streamlined permitting with NYC/NJ agencies, reducing project delays across multiple residential sites</span>
+              </div>
+              <div class="achievement-item">
+                <span class="achievement-bullet">•</span>
+                <span class="achievement-text">Operated construction equipment to support residential builds while ensuring OSHA compliance standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section animate-on-scroll" data-stagger-group=".skill-card">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <p class="section-subtitle">Tools and technologies I work with</p>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-category animate-on-scroll" data-stagger-delay="0">
+          <h3 class="skill-category-title">Languages</h3>
+          <div class="skill-items">
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">TypeScript</span>
+            <span class="skill-item">Java</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">SQL</span>
+          </div>
+        </div>
+        
+        <div class="skill-category animate-on-scroll" data-stagger-delay="100">
+          <h3 class="skill-category-title">Frontend</h3>
+          <div class="skill-items">
+            <span class="skill-item">React</span>
+            <span class="skill-item">Next.js</span>
+            <span class="skill-item">Vue.js</span>
+            <span class="skill-item">HTML/CSS</span>
+            <span class="skill-item">Tailwind CSS</span>
+            <span class="skill-item">SASS</span>
+          </div>
+        </div>
+        
+        <div class="skill-category animate-on-scroll" data-stagger-delay="200">
+          <h3 class="skill-category-title">Backend</h3>
+          <div class="skill-items">
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">Express</span>
+            <span class="skill-item">FastAPI</span>
+            <span class="skill-item">Django</span>
+            <span class="skill-item">MongoDB</span>
+            <span class="skill-item">PostgreSQL</span>
+          </div>
+        </div>
+        
+        <div class="skill-category animate-on-scroll" data-stagger-delay="300">
+          <h3 class="skill-category-title">AI/ML & Tools</h3>
+          <div class="skill-items">
+            <span class="skill-item">TensorFlow</span>
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">Scikit-learn</span>
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">AWS</span>
+            <span class="skill-item">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Showcasing innovation through code</p>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project 1: ParsePro.dev -->
+        <div class="project-card animate-on-scroll" data-stagger-delay="0">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <span class="project-icon">📄</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">ParsePro.dev</h3>
+            <p class="project-description">
+              Advanced AI-powered resume parser that leverages natural language processing to extract key insights and intelligently match candidates with relevant job opportunities. Streamlines recruitment processes while improving accuracy and efficiency.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">OpenAI API</span>
+              <span class="tech-tag">RESTful API Integration</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">Prompt Engineering</span>
+            </div>
+            <div class="project-links">
+              <a href="https://parsepro.dev" target="_blank" rel="noopener" class="btn btn-primary">
+                Live Site
+              </a>
+              <a href="https://github.com/alikayani/parsepro" target="_blank" rel="noopener" class="btn btn-secondary">
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2: NASA Mars Rover CDH -->
+        <div class="project-card animate-on-scroll" data-stagger-delay="200">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <span class="project-icon">🚀</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">NASA Mars Rover CDH</h3>
+            <p class="project-description">
+              Lead the Command & Data Handling (CDH) subsystem for a Mars Rover simulation as part of a multidisciplinary engineering team. Focused on fault-tolerant communication protocols and autonomous decision-making in extreme environments.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">CAD</span>
+              <span class="tech-tag">Project Management</span>
+              <span class="tech-tag">Systems Engineering</span>
+              <span class="tech-tag">Systems Engineering</span>
+            </div>
+            <div class="project-links">
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3: Smart Campus Navigator -->
+        <div class="project-card animate-on-scroll" data-stagger-delay="400">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <span class="project-icon">🎓</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Coding in progress</h3>
+            <p class="project-description">
+              Currently working on a project that will be released soon.
+            </p>
+            <!--
+             <div class="project-tech">
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">AR.js</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Google Maps API</span>
+            </div>
+            
+                <div class="project-links">
+              <a href="https://github.com/alikayani/smart-campus-navigator" target="_blank" rel="noopener" class="btn btn-primary">
+                View Repository
+              </a>
+            </div>
+               -->
+           
+          </div>
+        </div>
+      </div>
+      
+      <!-- Additional Projects CTA -->
+      <div class="projects-cta animate-on-scroll" data-stagger-delay="400">
+        <div class="cta-content">
+          <h3 class="cta-title">More Projects Coming Soon</h3>
+          <p class="cta-description">
+            Currently working on several exciting projects including AI-powered applications, full-stack web development, and mobile solutions. Check back soon for updates!
+          </p>
+          <div class="cta-buttons">
+            <a href="https://github.com/akayani40" target="_blank" rel="noopener" class="btn btn-primary">
+              View GitHub
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Discuss a Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education section animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic foundation in computer science and informatics</p>
+      </div>
+      
+      <div class="education-timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Bachelor of Science in Informatics</h3>
+            <p class="timeline-institution">University of California, Irvine</p>
+            <p class="timeline-date">2021 - 2025 (December)</p>
+            <p class="timeline-description">
+              Specializing in Human-Computer Interaction and Machine Learning. Relevant coursework includes Data Structures & Algorithms, Software Engineering, Artificial Intelligence, Database Systems, and Human-Computer Interaction Design.
+            </p>
+            <div class="timeline-achievements">
+              <span class="achievement-tag">Informatics Major</span>
+              <span class="achievement-tag">HCI Specialization</span>
+              <span class="achievement-tag">AI Focus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Let's Build Something Amazing</h2>
+        <p class="section-subtitle">Ready to bring your ideas to life</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3 class="contact-info-title">Get in Touch</h3>
+          <p class="contact-info-text">
+            I'm always excited to discuss new opportunities, innovative projects, or potential collaborations. Whether you're a recruiter, fellow developer, or someone with an interesting challenge, I'd love to hear from you.
+          </p>
+          
+          <div class="contact-methods">
+            <a href="mailto:ali@alikayani.com" class="contact-method">
+              <span class="contact-icon">📧</span>
+              <span class="contact-text">ali@alikayani.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ali-kayani/" target="_blank" rel="noopener" class="contact-method">
+              <span class="contact-icon">💼</span>
+              <span class="contact-text">LinkedIn</span>
+            </a>
+            <a href="https://github.com/alikayani" target="_blank" rel="noopener" class="contact-method">
+              <span class="contact-icon">💻</span>
+              <span class="contact-text">GitHub</span>
+            </a>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary form-submit">
+            <span class="submit-text">Send Message</span>
+            <span class="submit-loading">Sending...</span>
+          </button>
+          
+          <div id="form-status" class="form-status" role="alert"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-name">Ali Kayani</h3>
+          <p class="footer-tagline">Software Engineer & AI Enthusiast</p>
+        </div>
+        
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#experience" class="footer-link">Experience</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="footer-social">
+          <a href="https://github.com/akayani40" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <span class="social-icon">💻</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ali-kayani/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <span class="social-icon">💼</span>
+          </a>
+          <a href="mailto:ali@alikayani.com" class="social-link" aria-label="Email">
+            <span class="social-icon">📧</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Ali Kayani. Built with passion for code and innovation.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
